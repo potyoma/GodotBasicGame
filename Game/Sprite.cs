@@ -14,14 +14,16 @@ public class Sprite : Godot.Sprite
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
-        Move();
+        Godot.Sprite child = this.GetNode<Godot.Sprite>("Sprite2");
+        Move(child);
     }
 
-    public void Move()
+    public void Move(Godot.Sprite someChild)
     {
         if (Input.IsKeyPressed((int)KeyList.W))
         {
             this.Position += new Vector2(0, -speed);
+            someChild.GlobalPosition = new Vector2(0,0);
         }
         if (Input.IsKeyPressed((int)KeyList.S))
         {
