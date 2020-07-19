@@ -18,15 +18,15 @@ public class Sprite : Godot.Sprite
         {
             this.Position += new Vector2(0, -amount);
         }
-        else if (Input.IsKeyPressed((int)KeyList.S))
+        if (Input.IsKeyPressed((int)KeyList.S))
         {
             this.Position += new Vector2(0, amount);
         }
-        else if (Input.IsKeyPressed((int)KeyList.A))
+        if (Input.IsKeyPressed((int)KeyList.A))
         {
             this.Position += new Vector2(-amount, 0);
         }
-        else if (Input.IsKeyPressed((int)KeyList.D))
+        if (Input.IsKeyPressed((int)KeyList.D))
         {
             this.Position += new Vector2(amount, 0);
         }
